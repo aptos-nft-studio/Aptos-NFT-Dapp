@@ -1,5 +1,7 @@
 ## Aptos-NFT-Dapp Mintsite
 
+Video Tutorial: [https://www.youtube.com/watch?v=h1HUgilNuSE](https://www.youtube.com/watch?v=h1HUgilNuSE)
+
 ### Getting Set Up
 
 Pre-requisites

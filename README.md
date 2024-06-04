@@ -1,4 +1,4 @@
-## Aptos-NFT-Dapp Mintsite
+## Aptos NFT Studio - Aptos NFT Dapp Mintsite
 
 This repo contains the Nextjs web application that is linked to an Aptos NFT collection for minting.
 

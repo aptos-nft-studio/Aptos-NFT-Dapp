@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css'
 import axios from "axios";
-import { AptosClient } from "@aptos-labs/ts-sdk";
+import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
 import { useWallet } from '@aptos-labs/wallet-adapter-react';
 import ConnectWalletButton from '../helpers/Aptos/ConnectWalletButton';
 import QuantityToggle from '../helpers/QuantityToggle';
@@ -13,7 +13,13 @@ import Spinner from "react-bootstrap/Spinner";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const aptosClient = new AptosClient(NODE_URL);
+const aptosClient = new Aptos(); // default to devnet
+
+// with custom configuration
+// const config = new AptosConfig({ network: Network.MAINNET }); //refer to network here https://aptos-labs.github.io/aptos-ts-sdk/@aptos-labs/ts-sdk-1.19.0/enums/Network.html
+// const aptosClient = new Aptos(config);
+
+//const aptosClient = new AptosClient(NODE_URL); //deprecated
 const autoCmRefresh = 10000;
 
 export default function Home() {

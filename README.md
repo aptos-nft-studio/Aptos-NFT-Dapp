@@ -52,7 +52,15 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Project Structure
+### Deploy the Mintsite
+
+This will create a folder "out".
+
+``` to
+npm run build
+```
+
+The "out" folder can be deployed to any hosting like Netlify.
 
 ### Aptos Wallet
 

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css'
 import axios from "axios";
-import { AptosClient } from "aptos";
+import { AptosClient } from "@aptos-labs/ts-sdk";
 import { useWallet } from '@aptos-labs/wallet-adapter-react';
 import ConnectWalletButton from '../helpers/Aptos/ConnectWalletButton';
 import QuantityToggle from '../helpers/QuantityToggle';

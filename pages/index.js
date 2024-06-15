@@ -13,11 +13,10 @@ import Spinner from "react-bootstrap/Spinner";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const aptosClient = new Aptos(); // default to devnet
+const NETWORK_STR = Network.DEVNET; //refer to network here https://aptos-labs.github.io/aptos-ts-sdk/@aptos-labs/ts-sdk-1.19.0/enums/Network.html
 
-// with custom configuration
-// const config = new AptosConfig({ network: Network.MAINNET }); //refer to network here https://aptos-labs.github.io/aptos-ts-sdk/@aptos-labs/ts-sdk-1.19.0/enums/Network.html
-// const aptosClient = new Aptos(config);
+const config = new AptosConfig({ network: NETWORK_STR }); 
+const aptosClient = new Aptos(config);
 
 //const aptosClient = new AptosClient(NODE_URL); //deprecated
 const autoCmRefresh = 10000;
@@ -113,14 +112,12 @@ export default function Home() {
           },    
         });
         console.log("txHash ::", txHash.hash); 
-          txInfo = await aptosClient.waitForTransactionWithResult( txHash.hash );
-          console.log("txInfo :: ", JSON.stringify(txInfo));
           setMinting(false);
           getCandyMachineResourceData();
           toast.success(
             <div>
               <strong>Minting Success!</strong>
-              <a href={`https://explorer.aptoslabs.com/txn/${txHash.hash}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://explorer.aptoslabs.com/txn/${txHash.hash}?network=${NETWORK_STR}`} target="_blank" rel="noopener noreferrer">
               <p>View Transaction</p>
               </a>
             </div>

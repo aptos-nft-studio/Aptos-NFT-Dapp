@@ -7,6 +7,8 @@ import {
 
 function MyApp({ Component, pageProps }) {
   const wallets = [new PetraWallet()];
+//  const wallets = [new PetraWallet()];
+
 
   return <AptosWalletAdapterProvider
   plugins={wallets}

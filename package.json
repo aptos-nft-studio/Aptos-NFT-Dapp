@@ -13,7 +13,7 @@
     "@aptos-labs/wallet-adapter-react": "^2.5.0",
     "@solana/web3.js": "^1.77.3",
     "bootstrap": "^5.2.2",
-    "next": "^14.2.3",
+    "next": "^14.2.4",
     "petra-plugin-wallet-adapter": "^0.4.5",
     "react": "18.2.0",
     "react-bootstrap": "^2.5.0",

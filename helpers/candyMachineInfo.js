@@ -11,8 +11,9 @@ export const collectionBackgroundUrl =
 export const mode = "dev"; // "dev" or "test" or "mainnet"
 export let NODE_URL;
 export const CONTRACT_ADDRESS =
-  "0xf6bbf3b1f2ec965b15669ca43700312f4ea07e5acb494f6dc2f23449c6ae9d9f";
+  "0x3c9d531fe53e7dde20b1a745922d1627943153e5f8415670ddca06773d58e426";
 let FAUCET_URL;
+
 if (mode == "dev") {
   NODE_URL = "https://fullnode.devnet.aptoslabs.com/v1";
   FAUCET_URL = "https://faucet.devnet.aptoslabs.com";
